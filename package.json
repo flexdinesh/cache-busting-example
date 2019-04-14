@@ -2,12 +2,21 @@
   "name": "cache-busting-example",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:flexdinesh/cache-busting-example.git"
+  },
+  "license": "MIT",
+  "author": "Dineshkumar Pandiyan <flexdinesh@gmail.com>",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
   },
   "scripts": {
+    "clean": "rm -rf build",
+    "prebuild": "npm run generate-build-version",
+    "generate-build-version": "node generate-build-version",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
