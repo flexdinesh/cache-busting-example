@@ -9,7 +9,7 @@ There are different approaches that work for different types of websites. I rece
 - We want the site to load from the cache if there is no new version
 - We want to refresh the cache every time a new version of the app is deployed
 - We use npm package versioning to version our app and each deploy will be versioned incrementally
-- We build a `meta.json` file along with every build and it will act as a REST endpoint (won't be cached in browser)
+- We generate a `meta.json` file along with every build in the public dir and it will act as a REST endpoint (won't be cached in browser)
 - We refresh cache (`window.location.reload(true)`) in the browser whenever a new version is released
 
 ## License
