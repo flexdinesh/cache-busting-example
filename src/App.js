@@ -9,7 +9,7 @@ class App extends Component {
         {({ loading, isLatestVersion, refreshCacheAndReload }) => {
           if (loading) return null;
           if (!loading && !isLatestVersion) {
-            // refreshCacheAndReload();
+            refreshCacheAndReload();
           }
 
           return (
