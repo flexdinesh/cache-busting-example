@@ -8,14 +8,16 @@ class App extends Component {
       <CacheBuster>
         {({ loading, isLatestVersion, refreshCacheAndReload }) => {
           if (loading) return null;
-          if (!loading && !isLatestVersion) refreshCacheAndReload();
+          if (!loading && !isLatestVersion) {
+            // refreshCacheAndReload();
+          }
 
           return (
             <div className="App">
               <header className="App-header">
                 <h1>Cache Busting - Example</h1>
                 <p>
-                  Bundle version - <code>v{global.appVersion}</code>.
+                  Bundle version - <code>v{global.appVersion}</code>
                 </p>
               </header>
             </div>
